@@ -14,7 +14,7 @@
 - `db.<collection name>.insertMany([ {}, {}, {} ])` : insert more than one row at once.
   - `db.students.insertMany([ {name : "ashish", age : 43, profession : "finance"}, {name : "suman", age : 26, profession: "House wife"} ])`
 
-```
+```js
 db.books.insertOne({
     title: "The Way of Kings", author: "Brandon Sanderson", rating: 9, pages: 400, genres: ["fantasy", "adventure"], reviews: [
         {name: "Yoshi", body: "Great book!!"},
@@ -48,7 +48,7 @@ db.books.insertOne({
 - `db.students.find({math_score : {$type : 'int'}}).count()` : This will give us the documents count having field of particular type.
 - `db.books.find({reviews : {$size : 2}})` : this will give me the books having 2 reviews
 
-Shows document fields of your choice [either give what **to-show** orelse what **not-to-show**, dont give both]
+Shows document fields of your choice [either give what **to-show** orelse what **not-to-show**, dont give both (_id is exception)]
 - `db.books.find({search query}, {fields to show / fields not-to show})`
 - `db.books.find({ 'reviews': {$size:2}}, {title:1, author:1}` : shows title and author only 
 - `db.books.find({ 'reviews': {$size:2}}, {title:0, author:0}` : shows other-field except title and author.
