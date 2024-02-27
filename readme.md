@@ -80,7 +80,7 @@ Shows document fields of your choice [either give what **to-show** orelse what *
 - `db.books.find({"reviews.name": "luigi"})`
 - `db.books.find({"metadata.views": {$gt : 1200}})`
 - `db.books.find({"reviews.name": "luigi", "metadata.views": {$gt : 1200}})`
-- `db.books.find({'reviews.name': {$all: ['Alice', 'Vinod'] }`
+- `db.books.find({'reviews.name': {$all: ['luigi', 'mario'] }`
 
 # 4. Update document in DB
 
