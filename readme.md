@@ -82,6 +82,13 @@ Shows document fields of your choice [either give what **to-show** orelse what *
 - `db.books.find({"reviews.name": "luigi", "metadata.views": {$gt : 1200}})`
 - `db.books.find({'reviews.name': {$all: ['luigi', 'mario'] }`
 
+Itteration of document
+```js
+db.<collection_name>.find().forEach(function(doc) {
+    print("Key: " + doc.<key> + " Value: " + doc.<value>);
+})
+```
+
 # 4. Update document in DB
 
 - `db.books.updateOne({_id: ObjectId("622b746cd28eddc86c808d40")}, {$set: {rating: 8, pages: 360}})`
