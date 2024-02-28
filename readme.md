@@ -45,8 +45,8 @@ db.books.insertOne({
 - `db.students.find({age : {$in : [12, 300, 9, 200]}})` : show all document which has age **includes** 12, 300, 9, 200
 - `db.students.find({age : {$nin : [12, 300, 9, 200]}})` : show all document which has age **not includes** 12, 300, 9, 200
 - `db.products.find({price: {$exists: true}}).count()` : This will give us the documents having/not-having particular field.
-- `db.students.find({math_score : {$type : 'int'}}).count()` : This will give us the documents count having field of particular type.
 - `db.books.find({reviews : {$size : 2}})` : this will give me the books having 2 reviews
+- `db.students.find({math_score : {$type : 'int'}}).count()` : This will give us the documents count having field of particular type. [BSON types doc](https://www.mongodb.com/docs/manual/reference/bson-types/)
 
 Shows document fields of your choice [either give what **to-show** orelse what **not-to-show**, dont give both (_id is exception)]
 - `db.books.find({search query}, {fields to show / fields not-to show})`
