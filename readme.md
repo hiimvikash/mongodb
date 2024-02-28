@@ -108,3 +108,5 @@ db.<collection_name>.find().forEach(function(doc) {
 
 - `mongoimport <filePath\filename.json> -d <db name> -c <collection name>` {}, {}, {}
 - `mongoimport products.json -d shop -c products --jsonArray` if .json is [{} {} {}]
+
+[video reference](https://www.youtube.com/playlist?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA)
